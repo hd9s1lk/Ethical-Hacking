@@ -1,0 +1,61 @@
+nmap -T4(speed) -A -p-
+
+nmap -T4 -A
+
+-O (Operative System)
+
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-15 11:05 EST
+Nmap scan report for 192.168.20.10
+Host is up (0.00014s latency).
+Not shown: 65534 closed tcp ports (conn-refused)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 9.4p1 Debian 1 (protocol 2.0)
+| ssh-hostkey: 
+|   256 6f:e7:fb:0e:d3:42:6f:8e:a9:dd:a3:66:0f:44:fb:6c (ECDSA)
+|_  256 24:3f:27:8d:86:21:52:d6:73:38:6c:41:4f:16:ad:49 (ED25519)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+ls /usr/share/nmap/scripts
+
+└─$ nmap -p 443 --script=ssl-enum-ciphers side.utad.pt
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-02-15 11:13 EST
+Nmap scan report for side.utad.pt (193.136.40.16)
+Host is up (0.018s latency).
+
+PORT    STATE SERVICE
+443/tcp open  https
+| ssl-enum-ciphers: 
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|   TLSv1.3: 
+|     ciphers: 
+|       TLS_AKE_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_AKE_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_AKE_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|     cipher preference: server
+|_  least strength: A
+
+
+
+USING NESSUS
+
+msfconsole - search portscan - options (changing ports/rhosts) - run/exploit
+
+
+
+
+WEBSCAN
+
+nikto -h(host) url to host
+
+
+
+OR
+
+BurpSuite (changing proxy) and intercept ON
